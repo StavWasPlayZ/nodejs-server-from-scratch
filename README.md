@@ -6,9 +6,9 @@ This project implements a NodeJS web server using only the `ejs`, `mssql` and th
 
 Notably, it *does not* use any web server frameworks *(such as Express)*.
 
-In this website are fully functioning custom routing systems, cookies, user sessions and authentication procedures, without any external library, utility or web framework.
+In this website are fully functioning custom routing systems, cookies, user sessions and authentication procedures, without any external library, utility or web framework, implemented using only custom APIs.
 
-I have also originally custom-implemented my own EJS in this project until I discovered it exists.. 😅 *(Dropped because irrelevant to my goal.) (also EJS has super duper cool stuff OOTB)*
+I have actually also originally re-made my own EJS in this project until I discovered it already exists.. 😅 *(Dropped because irrelevant to my goal.) (also EJS has super duper cool stuff OOTB)*
 
 *This project was made back in 2022.*
 
