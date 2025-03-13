@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="/stylesheets/general.css">
+
+        <link rel="stylesheet" href="/stylesheets/form.css">
+    </head>
+    <body>
+        <%- include("../partials/nav") %>
+        
+        <main>
+            <h1><u>Sign Up</u></h1>
+            <form action="/signup" method="post" onsubmit="return validate()">
+                <div section="Profile">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" minlength="3" maxlength="20" required><br>
+                    <label for="username">Motto:</label>
+                    <input type="text" name="motto" id="motto" minlength="3" maxlength="75"><br><br>
+                </div>
+                <div section="Account Information" require>
+                    <label for="username">Email:</label>
+                    <input type="email" name="email" id="email" minlength="5" maxlength="320"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" minlength="3" maxlength="64"><br>
+                    <label for="cpassword">Confirm Password:</label>
+                    <input type="password" name="cpassword" id="cpassword" minlength="3" maxlength="64"><br><br>
+                </div>
+                <p class="error"><%- data.error %></p>
+                <input type="submit" value="Sign Up">
+            </form>
+            <script src="/scripts/formWrapper.js"></script>
+            <script src="/scripts/signupValidation.js"></script>
+            <br><br>
+            <a href="/login">Log In</a>
+        </main>
+    </body>
+</html>

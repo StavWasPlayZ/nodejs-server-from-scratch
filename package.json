@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "http": "^0.0.1-security",
+    "tedious": "^15.1.0"
+  },
+  "type": "module"
+}

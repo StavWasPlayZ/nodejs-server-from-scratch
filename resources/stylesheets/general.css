@@ -1,0 +1,53 @@
+:root {
+    --nav-height: 3em;
+}
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+main {
+    margin: 10px;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.123);
+    transform: scale(1);
+
+    transition: box-shadow .2s ease-in-out, transform .2s ease-in-out;
+}
+ul:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.123);
+    transform: scale(1.003);
+}
+
+ul > a {
+    width: 100%;
+    height: 100%;
+}
+ul li {
+    height: var(--nav-height);
+    line-height: var(--nav-height);
+
+    font-size: 1em;
+    text-align: center;
+    width: 100%;
+}
+ul li:not(.ignore) {
+    background-color: rgb(236, 236, 236);
+    transition: background-color .2s ease-in-out;
+}
+ul li:not(.ignore):hover {
+    background-color: lightgray;
+}
+ul li > input {
+    width: 80%;
+}

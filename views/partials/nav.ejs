@@ -1,0 +1,25 @@
+<nav>
+    <ul>
+        <a href="/"><li>Home</li></a>
+        <!-- Considering one may only have a cookie if they are autherised -->
+        <% if (data.cookies) {%>
+            <!-- Logged in -->
+            <a href="/profile"><li>Profile</li></a>
+        <% } else { %>
+            <!-- Non-logged in -->
+            <a href="/login"><li>Login</li></a>
+        <% } %>
+        
+        <li class="ignore">
+            <input type="text" name="search" id="search" placeholder="Search term...">
+        </li>
+    </ul>
+</nav>
+
+<script>
+    const searchBar = document.getElementById("search");
+    searchBar.addEventListener("keydown", (event) => {
+        if (searchBar.value && (event.key === "Enter"))
+            window.location.href = "/search?term="+encodeURIComponent(searchBar.value);
+    });
+</script>

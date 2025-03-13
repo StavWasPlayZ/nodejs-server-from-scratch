@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="/stylesheets/general.css">
+        <style>
+            main {
+                width: 60vw;
+                margin: auto;
+            }
+            h1, h2 {
+                text-align: center;
+            }
+            q {
+                color: black;
+            }
+
+            .result {
+                display: block;
+                font-size: 1.1em;
+                padding: 3px 10px;
+                border: 2px solid black;
+                margin-bottom: 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <%- include("../partials/nav") %>
+        
+        <main>
+            <% if (data.users) { %>
+
+                <h1>Results</h1>
+
+                <% for (let i = 0; i < data.users.length; i++) {
+                    const user = data.users[i]; %>
+                    
+                    <a href="/profile?id=<%=user.Id%>" class="result">
+                        <span><%=user.Username%></span>
+                        <% if (user.Motto) { %>
+                            <br>
+                            <span><i><q><%=user.Motto%></q></i></span>
+                        <% } %>
+                    </a>
+
+                <% } %> 
+
+
+            <% } else { %>
+                <h1>No Results Found</h1>
+                <h2>Shall we try again?</h2>
+            <% } %> 
+        </main>
+        
+    </body>
+</html>

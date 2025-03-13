@@ -1,0 +1,14 @@
+label::after {
+    content: "";
+    color: red;
+
+    margin-right: 2px;
+}
+label[required]::after {
+    content: "*";
+}
+
+.error {
+    color: red;
+    margin: 0 2px;
+}
