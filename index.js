@@ -119,5 +119,12 @@ function includesStringArr(string, arr, allowAsterisk = true) {
 
 
 // Fnishing touches
-SERVER.listen(PORT, () => console.log("Server made on port " + PORT));
-mssql.connect(process.env.DB_CONNECTION_STRING);
+SERVER.listen(PORT, () => console.log("Server listening on port " + PORT));
+
+mssql.connect(process.env.DB_CONNECTION_STRING, (err) => {
+    if (err != undefined) {
+        console.error("Error connecting to MSSQL instance: " + err);
+    } else {
+        console.error("Successfully connected to MSSQL instance" + err);
+    }
+});
