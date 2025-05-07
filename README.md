@@ -10,7 +10,7 @@ In this website are fully functioning custom routing systems, cookies, user sess
 
 <!--I have actually also originally re-made my own EJS in this project until I discovered it already exists.. 😅 *(Dropped because irrelevant to my goal.) (also EJS has super cool stuff ootb)*-->
 
-*This project was made back in 2022.*
+*This project was made in 2022.*
 
 ## In This Website
 
